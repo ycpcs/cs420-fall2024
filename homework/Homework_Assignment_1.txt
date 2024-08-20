@@ -1,0 +1,26 @@
+CS420
+HW1
+======
+To be submitted as a PDF via the Assignments tab on Canvas.
+You can handwrite and scan your solutions or generate a PDF 
+from your favorite word processor.  However, only PDFs can 
+be uploaded on Canvas (i.e. no .docx, .txt, .odt will be 
+accepted).
+======
+
+
+
+1) [3 points] What is the purpose of a system call?
+
+
+
+
+2) [3 points] Describe three general methods for passing parameters to the 
+operating system.
+
+
+
+
+3) [3 points] What are some of the advantages of the microkernel approach to 
+system design?  What are some of the disadvantages of using the microkernel 
+approach?

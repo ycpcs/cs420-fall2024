@@ -1,0 +1,31 @@
+CS420
+HW8
+======
+To be submitted as a PDF via the Assignments tab on Canvas.
+You can handwrite and scan your solutions or generate a PDF 
+from your favorite word processor.  However, only PDFs can 
+be uploaded on Canvas (i.e. no .docx, .txt, .odt will be 
+accepted).
+======
+
+
+
+1) Suppose that a disk drive has 5000 cylinders, numbered 0 to 4999. The drive 
+is currently serving a request at cylinder 781, and the previous request was at 
+cylinder 125.  That is, the read/write head is currently moving from lower 
+cylinder values to higher. The queue of pending requests, in FIFO order, is:
+
+    120, 1502, 955, 2134, 1002, 1401, 2100, 1640, 92
+
+Starting from the current head position, what is the total distance (in 
+cylinders) that the disk arm moves to satisfy all the pending requests, for each 
+of the following disk-scheduling algorithms?
+
+    a) [3 points] FCFS
+    b) [3 points] SSTF
+    c) [3 points] SCAN 
+    d) [3 points] LOOK
+    e) [3 points] C-SCAN
+    f) [3 points] C-LOOK
+
+

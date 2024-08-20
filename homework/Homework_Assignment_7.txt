@@ -1,0 +1,80 @@
+CS420
+HW7
+======
+To be submitted as a PDF via the Assignments tab on Canvas.
+You can handwrite and scan your solutions or generate a PDF 
+from your favorite word processor.  However, only PDFs can 
+be uploaded on Canvas (i.e. no .docx, .txt, .odt will be 
+accepted).
+======
+
+
+
+1) [3 points] A certain computer provides its users with a virtual-memory space 
+of 2^32 bytes. The computer has 2^20 bytes of physical memory. The virtual 
+memory is implemented by paging, and the page size is 8192 bytes. A user process 
+generates the virtual address 13423456 (in hex, 0xCCD360). Determine the 
+corresponding physical memory location and show your work. Assume that when the 
+page # is looked up in the page table the value for f (i.e. the frame) is 15. 
+Provide your answer in either DECIMAL OR HEXADECIMAL.
+
+
+
+
+2) [3 points] When a page fault occurs, the process requesting the page must 
+block while waiting for the page to be brought from disk into physical memory. 
+Assume there exists a process with five user-level threads where the mapping of 
+user threads to kernel threads is many-to-one. If one user thread incurs a page 
+fault while accessing its stack, would the other user threads belonging to the 
+same process also be affected by the page fault (i.e., would they also have to 
+wait for the faulting page to be brought into memory?) 
+Explain.
+
+
+
+
+3) [3 points] The table below is a page table for a system with 12-bit virtual 
+and physical addresses with 256-byte pages. The list of free page frames is 0xD, 
+0xE, 0xF (that is, 0xD is at the head of the list, 0xE is second, and 0xF is 
+last).
+
+  +-------+------------+
+  | Page  | Page Frame |
+  +-------+------------+
+  |  0x0  |     -      |
+  |  0x1  |     0x5    |
+  |  0x2  |     0xC    |
+  |  0x3  |     0xA    |
+  |  0x4  |     -      |
+  |  0x5  |     0x4    |
+  |  0x6  |     0x3    |
+  |  0x7  |     -      |
+  |  0x8  |     0xB    |
+  |  0x9  |     0x1    |
+  +-------+------------+
+
+Given the following virtual addresses, convert them to their equivalent physical 
+addresses in hexadecimal. All numbers are given in hexadecimal. (A dash for a 
+page frame indicates the page is not in memory.)
+
+    a) 0x9EF
+    b) 0x111
+    c) 0x401
+    d) 0x7EF
+
+
+
+
+4) Consider the following page reference string:
+
+     1, 2, 3, 4, 2, 1, 5, 6, 2, 1, 2, 3, 7, 6, 3, 2, 1, 2, 3, 6
+
+How many page faults would occur for the following replacement algorithms, 
+assuming one, three, five, and seven frames?  Remember all frames are initially 
+empty, so your first unique pages will all cost one fault each.
+
+    4a) [3 points] LRU replacement
+    4b) [3 points] FIFO replacement
+    4c) [3 points] Optimal replacement
+
+

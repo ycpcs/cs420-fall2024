@@ -1,0 +1,86 @@
+CS420
+HW3
+======
+To be submitted as a PDF via the Assignments tab on Canvas.
+You can handwrite and scan your solutions or generate a PDF 
+from your favorite word processor.  However, only PDFs can 
+be uploaded on Canvas (i.e. no .docx, .txt, .odt will be 
+accepted).
+======
+
+
+
+1) [3 points] Can a multithreaded solution using multiple user-level threads 
+achieve better performance on a multiprocessor system than on a single-processor 
+system?  Yes or No or “it depends”?  Explain.
+
+
+
+
+2) [3 points] The program shown below uses the Pthreads API.  What would be the 
+output from the program at LINE C and LINE P?  Briefly explain how you arrived 
+at your answer.
+
+    #include <stdio.h>
+    #include <pthread.h>
+    #include <unistd.h>
+    #include <sys/wait.h>
+
+
+    int value = 0;
+    void *C_runner(void *param);  /* a thread function */
+    void *P_runner(void *param);  /* a thread function */
+
+
+    int main(int argc, char *argv[])
+    {
+        int pid;
+        pthread_t tid;
+        pthread_attr_t attr;
+
+        pid = fork();
+
+        if (pid == 0) {  /* child process */
+            pthread_attr_init(&attr);
+            pthread_create(&tid, &attr, C_runner, NULL);
+            pthread_join(tid, NULL);
+            printf("CHILD: value = %d\n", value);  /* LINE C */
+        }
+        else if (pid > 0) {  /* parent process */
+            wait(NULL);
+            pthread_attr_init(&attr);
+            pthread_create(&tid, &attr, P_runner, NULL);
+            pthread_join(tid, NULL);
+            printf("PARENT: value = %d\n", value);  /* LINE P */
+        }
+    }
+
+    void *C_runner(void *param) {
+        value = value + 5;
+        pthread_exit(0);
+    }
+    
+    void *P_runner(void *param) {
+        value = value + 2;
+        pthread_exit(0);
+    }
+
+
+
+
+3) [3 points] Consider a multiprocessor system and a multithreaded program 
+written using the many-to-many threading model.  Let the number of user-level 
+threads in the program be more than the number of processors in the system. 
+Discuss the performance implications of the following scenarios.
+
+a) The number of kernel threads allocated to the program is less than the number 
+of processors.
+
+b) The number of kernel threads allocated to the program is equal to the number 
+of processors.
+
+c) The number of kernel threads allocated to the program is greater than the 
+number of processors but less than the number of user-level threads. 
+
+
+

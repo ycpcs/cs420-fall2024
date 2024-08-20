@@ -1,0 +1,118 @@
+CS420
+HW4
+======
+To be submitted as a PDF via the Assignments tab on Canvas.
+You can handwrite and scan your solutions or generate a PDF 
+from your favorite word processor.  However, only PDFs can 
+be uploaded on Canvas (i.e. no .docx, .txt, .odt will be 
+accepted).
+======
+
+
+
+1) Suppose that the following processes arrive for execution at the times 
+indicated.  Each process will run for the amount of time listed.  In answering 
+the questions, use nonpreemptive scheduling, and base all decisions on the 
+information you have at the time the decision must be made.
+
+
+    Process    Arrival Time    Burst Time
+    -------    ------------    ----------
+      P1            0              8
+      P2            2              4
+      P3            3              1
+
+1a) [3 points] Draw a Gantt chart for the provided process using the FCFS 
+scheduling algorithm.  What is the average turnaround time for these processes?
+
+1b) [3 points] Draw a Gantt chart for the provided process using the SJF 
+scheduling algorithm.  What is the average turnaround time for these processes?
+
+
+
+
+2) [3 points] Why is it important for the scheduler to distinguish I/O-bound 
+programs from CPU-bound programs?
+
+
+
+
+3) Consider the following set of processes, with the length of the CPU burst 
+given in milliseconds:
+
+    Process    Burst Time    Priority
+    -------    ----------    --------
+      P1            8            3
+      P2            3            1
+      P3            2            2
+      P4            1            4
+      P5            6            2
+      
+
+The processes are assumed to have arrived in the order:
+P1, P2, P3, P4, P5, all at time 0.
+
+3a) [3 points] Draw a Gantt chart that illustrates the execution of these 
+processes using the FCFS scheduling algorithm. THEN, for each process, compute 
+the turnaround time as well as the waiting time.
+
+3b) [3 points] Draw a Gantt chart that illustrates the execution of these 
+processes using the SJF scheduling algorithm. THEN, for each process, compute 
+the turnaround time as well as the waiting time.
+
+3c) [3 points] Draw a Gantt chart that illustrates the execution of these 
+processes using the nonpreemptive priority scheduling algorithm. THEN, for each 
+process, compute the turnaround time as well as the waiting time.  In cases 
+where you have a tie, choose the process with the smaller process number first.
+
+3d) [3 points] Draw a Gantt chart that illustrates the execution of these 
+processes using the round robin scheduling algorithm (quantum = 1). THEN, for 
+each process, compute the turnaround time as well as the waiting time.
+
+3e) [3 points] Which of the algorithms results in the minimum average waiting 
+time (over all processes)?
+
+
+
+
+4) [3 points] Consider the following set of processes, with the arrival times 
+and length of the CPU bursts given in milliseconds:
+
+    Process    Arrival Time    Burst Time
+    -------    ------------    ----------
+      P1            0              5
+      P2            1              1
+      P3            3              1
+      P4            3              2
+      P5            6              4
+
+
+Draw a Gantt chart that illustrates the execution of these processes using the
+shortest-remaining-time-first scheduling algorithm. THEN, for each process, 
+compute the turnaround time as well as the waiting time.
+
+
+
+
+5) [3 points] Which of the following scheduling algorithms could result in 
+starvation? Select all that apply.
+
+a) First-come, first served
+b) Shortest job first
+c) Round robin
+d) Priority
+
+
+
+
+6) [3 points] Consider a variant of the RR scheduling algorithm in which the 
+entries in the ready queue are pointers to the PCBs.
+
+a) What would be the effect of putting two pointers to the same process in the 
+ready queue?
+
+b) What would be the advantages and disadvantages of this scheme?
+
+c) How would you modify the basic RR algorithm to achieve the same effect 
+without the duplicate pointers?
+

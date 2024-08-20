@@ -1,0 +1,139 @@
+CS420
+HW9
+======
+To be submitted as a PDF via the Assignments tab on Canvas.
+You can handwrite and scan your solutions or generate a PDF 
+from your favorite word processor.  However, only PDFs can 
+be uploaded on Canvas (i.e. no .docx, .txt, .odt will be 
+accepted).
+======
+
+
+
+1) [3 points] Consider a file currently consisting of 80 blocks.  Calculate how 
+many disk I/O operations are required for the **CONTIGUOUS allocation** strategy 
+for the scenarios described in (a), (b), and (c).
+
+For each, make the following assumptions:
+  - the new block information to be written is stored in memory
+  - the file control block will need to be both read and written (i.e. it is not 
+    currently cached)
+  - the directory structure is contained in a single block
+  - the directory structure will need to be read, but may or may not need to be 
+    rewritten
+  - for contiguous allocation, assume there is no room to grow file at the 
+    beginning but there is room to grow at the end
+
+    a) The block is added at the beginning.  
+    b) The block is added in the middle.
+    c) The block is added at the end.
+
+
+
+
+2) [3 points] Consider a file currently consisting of 80 blocks.  Calculate how 
+many disk I/O operations are required for the **LINKED allocation** strategy for 
+the scenarios described in (a), (b), and (c).
+
+For each, make the following assumptions: 
+  - the new block information to be written is stored in memory
+  - the file control block will need to be both read and written (i.e. it is not 
+    currently cached)
+  - the directory structure is contained in a single block
+  - the directory structure will need to be read, but may or may not need to be 
+    rewritten
+
+    a) The block is added at the beginning.  
+    b) The block is added in the middle.
+    c) The block is added at the end.
+
+    
+
+
+3) [3 points] Consider a file currently consisting of 80 blocks.  Calculate how 
+many disk I/O operations are required for the **INDEXED allocation** strategy 
+for the scenarios described in (a), (b), and (c).
+
+For each, make the following assumptions: 
+  - the new block information to be written is stored in memory
+  - the file control block will need to be both read and written (i.e. it is not 
+    currently cached)
+  - the directory structure is contained in a single block
+  - the directory structure will need to be read, but may or may not need to be 
+    rewritten
+
+    a) The block is added at the beginning.  
+    b) The block is added in the middle.
+    c) The block is added at the end.
+
+
+
+
+4) [3 points] Consider a file currently consisting of 45 blocks.  Calculate how 
+many disk I/O operations are required for the **CONTIGUOUS allocation** strategy 
+for the scenarios described in (a), (b), and (c).
+
+For each, make the following assumptions: 
+  - the file control block will need to be both read and written (i.e. it is not 
+    currently cached)
+  - the directory structure is contained in a single block
+  - the directory structure will need to be read, but may or may not need to be 
+    rewritten
+
+    a) The block is removed from the beginning.
+    b) The block is removed from the middle.
+    c) The block is removed from the end.
+
+
+
+
+5) [3 points] Consider a file currently consisting of 45 blocks.  Calculate how 
+many disk I/O operations are required for the **LINKED allocation** strategy for 
+the scenarios described in (a), (b), and (c).
+
+For each, make the following assumptions: 
+  - the file control block will need to be both read and written (i.e. it is not 
+    currently cached)
+  - the directory structure is contained in a single block
+  - the directory structure will need to be read, but may or may not need to be 
+    rewritten
+  - for linked allocation, assume you do NOT need to nullify the next pointer of 
+    either a removed block or the last block in the list
+
+    a) The block is removed from the beginning.
+    b) The block is removed from the middle.
+    c) The block is removed from the end.
+
+
+
+
+6) [3 points] Consider a file currently consisting of 45 blocks.  Calculate how 
+many disk I/O operations are required for the **INDEXED allocation** strategy 
+for the scenarios described in (a), (b), and (c).
+
+For each, make the following assumptions: 
+  - the file control block will need to be both read and written (i.e. it is not 
+    currently cached)
+  - the directory structure is contained in a single block
+  - the directory structure will need to be read, but may or may not need to be 
+    rewritten
+
+    a) The block is removed from the beginning.
+    b) The block is removed from the middle.
+    c) The block is removed from the end.
+
+
+
+
+7) [3 points] Why must the bit map for file allocation be kept on mass storage, 
+rather than in main memory?
+
+
+
+
+8) [3 points] What are the advantages of the variation of linked allocation that 
+uses a FAT to chain together the blocks of a file?
+
+
+
+

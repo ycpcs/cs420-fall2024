@@ -1,0 +1,113 @@
+CS420
+HW2
+======
+To be submitted as a PDF via the Assignments tab on Canvas.
+You can handwrite and scan your solutions or generate a PDF 
+from your favorite word processor.  However, only PDFs can 
+be uploaded on Canvas (i.e. no .docx, .txt, .odt will be 
+accepted).
+======
+
+
+
+1) [3 points] What are the two models of interprocess communication? What are 
+the strengths and weaknesses of the two approaches?
+
+
+
+
+2) [3 points] Including the initial parent process, how many processes are 
+created by the program shown below?  Briefly explain how you arrived at your 
+answer.
+
+    #include <stdio.h>
+    #include <unistd.h>
+
+    int main()
+    {
+        /* fork a child process */
+        fork();
+
+        /* fork another child process */
+        fork();
+
+        /* and fork another */
+        fork();
+
+        return 0;
+    }
+
+
+
+
+3) [3 points] Using the program below, identify the values of pid at lines A, B, 
+C, D, and E.  Assume that the actual pids of the parent and child are 1001 and 
+2002, respectively.  Note that the getpid() function returns the process ID of 
+the process that calls the function.  The getppid() function returns the process 
+ID of the calling process's parent.  Explain how you arrived at your answer.
+
+    #include <sys/types.h>
+    #include <stdio.h>
+    #include <unistd.h>
+    #include <sys/wait.h>
+
+    int main()
+    {
+        pid_t pid, pid1, pid2;
+
+        /* fork a child process */
+        pid = fork();
+
+        if (pid < 0) {  /* error occurred */
+            fprintf(stderr, "Fork Failed");
+            return 1;
+        }
+        else if (pid == 0) {  /* child process */
+            pid1 = getpid();
+            pid2 = getppid();
+            printf("child: pid = %d\n", pid);    /* A */
+            printf("child: pid1 = %d\n", pid1);  /* B */
+            printf("child: pid2 = %d\n", pid2);  /* C */
+        }
+        else {  /* parent process */
+            pid1 = getpid();
+            printf("parent: pid = %d\n", pid);    /* D */
+            printf("parent: pid1 = %d\n", pid1);  /* E */
+            wait(NULL);
+        }
+
+        return 0;
+    }
+
+
+
+
+4) [3 points] Using the program shown below, EXPLAIN what the output will be at 
+Line A.  That is, don't simply write down what the output is.  Determine what 
+the output is, and explain how you arrived at your answer.
+
+    #include <sys/types.h>
+    #include <stdio.h>
+    #include <unistd.h>
+    #include <sys/wait.h>
+
+    int value = 5;
+
+    int main()
+    {
+        pid_t pid;
+
+        pid = fork();
+
+        if (pid == 0) {  /* child process */
+            value += 15;
+            return 0;
+        }
+        else if (pid > 0) {  /* parent process */
+            wait(NULL);
+            printf("PARENT: value = %d\n", value);  /* LINE A */
+            return 0;
+        }
+    }
+
+
