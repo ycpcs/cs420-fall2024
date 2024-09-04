@@ -34,7 +34,7 @@ var courseInfo = {
         {
             topic: new Topic( "Operating System Structure", "lectures/lecture4_operating_system_structure.pdf" ),
             reading: new Reading("OSC10 § 2.7 - 2.11"),
-            assign: new Assignment("Assignment #1: filecopy", "assign/assign01.html", 9)
+            assign: new Assignment("Assignment #1: filecopy", "assign/assign01.html", 7)
         },
         {
             topic: new Topic( "Processes", "lectures/lecture5_processes.pdf" ),
@@ -93,7 +93,7 @@ var courseInfo = {
         },
         {
             topic: new Topic( "More on Semaphores and Synchronization", "" ),
-            assign: new Assignment("Assignment #3: semaphores", "assign/assign03.html", 37)
+            assign: new Assignment("Assignment #3: semaphores", "assign/assign03.html", 23)
         },
         {
             topic: new Topic( "Deadlocks & Deadlock Prevention", "lectures/lecture16+17+18_deadlock.pdf" ),
