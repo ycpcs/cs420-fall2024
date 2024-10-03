@@ -12,7 +12,7 @@ accepted).
 
 1) [3 points] Can a multithreaded solution using multiple user-level threads 
 achieve better performance on a multiprocessor system than on a single-processor 
-system?  Yes or No or “it depends”?  Explain.
+system?  Yes or No or “it depends”?  Consider different threading models and explain.
 
 
 
@@ -68,19 +68,22 @@ at your answer.
 
 
 
-3) [3 points] Consider a multiprocessor system and a multithreaded program 
-written using the many-to-many threading model.  Let the number of user-level 
-threads in the program be more than the number of processors in the system. 
-Discuss the performance implications of the following scenarios.
+3) [3 points] Consider a multiprocessor system and a single multithreaded 
+process written using the many-to-many threading model. Let the number of 
+user-level threads in the process be more than the number of processor cores 
+in the system. For the sake of simplicity, assume the process is the only 
+process running on the system. Discuss the performance implications (i.e. 
+CPU utilization) of the following scenarios. Consider what happens if a 
+user-level thread blocks.
 
-a) The number of kernel threads allocated to the program is less than the number 
-of processors.
+a) The number of kernel threads allocated to the process is less than the number 
+of processor cores.
 
-b) The number of kernel threads allocated to the program is equal to the number 
-of processors.
+b) The number of kernel threads allocated to the process is equal to the number 
+of processor cores.
 
-c) The number of kernel threads allocated to the program is greater than the 
-number of processors but less than the number of user-level threads. 
+c) The number of kernel threads allocated to the process is greater than the 
+number of processor cores but less than the number of user-level threads. 
 
 
 

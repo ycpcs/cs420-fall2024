@@ -89,11 +89,13 @@ var courseInfo = {
         },
         {
             topic: new Topic( "Classic Problems of Synchronization", "lectures/lecture15_classic_synchronization_problems.pdf" ),
-            reading: new Reading("OSC10 § 6.7 - 6.10, 7.1")
+            reading: new Reading("OSC10 § 6.7 - 6.10, 7.1"),
+            assign: new Assignment("Assignment #3: semaphores", "assign/assign03.html", 25)            
         },
         {
-            topic: new Topic( "More on Semaphores and Synchronization", "" ),
-            assign: new Assignment("Assignment #3: semaphores", "assign/assign03.html", 23)
+            topic: new Topic( "More on Semaphores and Synchronization", "" )
+            // 2024 - moved due tp surgery
+//            assign: new Assignment("Assignment #3: semaphores", "assign/assign03.html", 23)
         },
         {
             topic: new Topic( "Deadlocks & Deadlock Prevention", "lectures/lecture16+17+18_deadlock.pdf" ),
