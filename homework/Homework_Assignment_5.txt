@@ -10,11 +10,11 @@ accepted).
 
 
 
-1) [3 points] Consider the deadlock situation that could occur in the 
-dining-philosophers problem when the philosophers obtain the chopsticks 
-one at a time. Discuss how each of the four necessary conditions for deadlock 
-indeed hold in this setting. Discuss how deadlocks could be prevented by 
-eliminating any one of the four conditions.
+1) [3 points] Read section 7.1.3 of your textbook. Consider the deadlock 
+situation that could occur in the dining-philosophers problem when the 
+philosophers obtain the chopsticks one at a time. Discuss how each of the 
+four necessary conditions for deadlock indeed hold in this setting. Discuss 
+how deadlocks could be prevented by eliminating any one of the four conditions.
 
 
 
