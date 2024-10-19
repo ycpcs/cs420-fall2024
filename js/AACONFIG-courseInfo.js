@@ -104,7 +104,7 @@ var courseInfo = {
         {
             topic: new Topic( "Deadlock Avoidance", "lectures/lecture16+17+18_deadlock.pdf" ),
             reading: new Reading("OSC10 § 8.6"),
-            assign: new Homework("Homework #5", "homework/Homework_Assignment_5.txt", 5)
+            assign: new Homework("Homework #5", "homework/Homework_Assignment_5.txt", 7)
         },
         {
             topic: new Topic( "Deadlock Detection, and Recovery", "lectures/lecture16+17+18_deadlock.pdf" ),
